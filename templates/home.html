@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+    {% for tuite in tuites %}
+        {% include "includes/card.html" %}
+    {% endfor %}
+    </div>
+
+
+{% endblock %}

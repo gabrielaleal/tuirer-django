@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+    {% if form.errors %}
+        {% for error in form.non_field_errors %}
+            <p class="error">{{error}}</p>
+        {% endfor %}
+    {% endif %}
+
+    {% if success_message %}
+        <p class="message">{{ success_message }}</p>
+    {% endif %}
+
+    <form method="POST" id="post-form">
+        {% csrf_token %}
+
+        {% for field in form %}
+            {% if not field.name == 'author' %}
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {% endif %}
+
+            {% render_field field class="post-tuite-field" placeholder=field.label autofocus=True %}
+            <p>{{ field.help_text }}</p>
+            {{ field.errors }}
+        {% endfor %}
+
+        <input type="submit" value="Postar Tuite" />
+        
+    </form>
+{% endblock %}

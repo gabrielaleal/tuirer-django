@@ -1,0 +1,30 @@
+{% load staticfiles %}
+
+<! doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tuirer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+<body>
+
+    {% include "includes/menu.html" %}
+    
+    <div class="block-content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    
+    <footer>
+        <div class="tuirer-footer">
+            <h3>Thanks for visiting us</h3>
+        </div>
+    </footer>
+</body>
+</html>

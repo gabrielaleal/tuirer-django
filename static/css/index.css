@@ -1,0 +1,144 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    height: 100vh;
+}
+
+nav {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    color: white;
+    background-color: lightseagreen;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+}
+
+.redirect {
+    color: black;
+    padding-left: 20px;
+}
+
+.block-content {
+    padding: 80px;
+}
+
+.menu .tuirer-title {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.submenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    box-shadow: 1px 2px 1px #e6e6e6;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    color: white;
+    background-color: lightseagreen;
+    margin-top: 30px;
+}
+
+.tuirer-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card {
+    margin-bottom: 10px;
+    border: 1px solid lightseagreen;
+    padding: 10px;
+}
+
+.card a {
+    text-decoration: none;
+    color: indianred;
+    display: block;
+    padding: 5px 0;
+}
+
+.likes-list {
+    font-size: 14px;
+}
+
+.profile-title {
+    padding-top: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.menu a {
+    color: lightcoral;
+}
+
+.tuites-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.single-tuite {
+    padding: 15px 10px;
+    box-shadow: 1px 2px 2px darkgrey;
+    width: 80vw;
+}
+
+.login-content {
+    border: 1px solid lightcoral;
+}
+
+.login-content form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-title {
+    color: white;
+    background-color: lightseagreen;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.profile a {
+    text-decoration: none;
+    color: lightcoral;
+}
+
+.profile #edit-button {
+    display: flex;
+    margin-top: 15px;
+}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="profile">
+    <div class="profile-picture" style="background-image: url('{{ profile.picture.url }}');"></div>
+    {% if profile == request.user %}
+        <a href="{% url 'users:profile-edit' request.user.pk %}" id="edit-button">Edit profile</a>
+    {% endif %}
+    <h2 class="profile-title">Welcome, {{ profile }}!</h2>
+    {{ profile.email }}
+
+    <div>
+        {% for tuite in profile.tuites.all %}
+            {% include "includes/card.html" %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+<nav>
+    <div class="menu">
+        <a href="{% url 'home' %}" class="tuirer-title">Tuirer</a>
+        <div class="submenu">
+            {% if user.is_authenticated %}
+                <a href="{% url 'users:profile' request.user.pk %}" class="redirect">Hello, {{ request.user.username }}</a>
+                
+            {% else %}
+                <a href="{% url 'users:login' %}">Login</a>        
+            {% endif %}
+            <a href="{% url 'tuites:post' %}" class="nav-link">Post</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'users:logout' %}" class="redirect">Sair</a>
+            {% endif %}
+        </div>
+    </div>
+</nav>
